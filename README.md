@@ -58,12 +58,32 @@ We are following a strict Red-Green-Refactor TDD cycle. The testing approach is 
 
 #### Commit 2
 ![TestSuite2](server/imgs/testsuites2.png)
-![Validation2a](server/imgs/validation2.png)
+![Validation2](server/imgs/validation2.png)
 
 
 #### Commit 3
 ![TestSuite3](server/imgs/testsuites3.png)
-![Validation3a](server/imgs/validation3.png)
+![Validation3](server/imgs/validation3.png)
 
 #### Commit 4
+[DOCS UPDATE]
+
+### Integration Tests (Phase 2)
+
+#### Commit 5
+![TestSuite5](server/imgs/testsuites5.png)
+![Validation5a](server/imgs/validation5a.png)
+![Validation5b](server/imgs/validation5b.png)
+![Validation5c](server/imgs/validation5c.png)
+![Validation5d](server/imgs/validation5d.png)
+
+#### Commit 6
+![TestSuite6](server/imgs/testsuites6.png)
+![Validation6](server/imgs/validation6.png)
+
+#### Commit 7
+![TestSuite7](server/imgs/testsuites7.png)
+![Validation7](server/imgs/validation7.png)
+
+#### Commit 8
 [DOCS UPDATE]
