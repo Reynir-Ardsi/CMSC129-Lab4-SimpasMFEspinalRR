@@ -104,7 +104,7 @@ We are following a strict Red-Green-Refactor TDD cycle. The testing approach is 
 ![Validation11](server/imgs/validation11.png)
 
 #### Commit 12
-![Full Test Suite](server/imgs/full-test-suite.png)
+[DOCS UPDATE]
 
 ## Reflection
 
