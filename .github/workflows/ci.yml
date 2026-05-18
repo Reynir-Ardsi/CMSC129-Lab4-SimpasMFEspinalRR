@@ -25,3 +25,30 @@ jobs:
     - name: Run Unit & Integration Tests (Server)
       working-directory: ./server
       run: npm test
+
+  system-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+
+    - name: Install server dependencies
+      working-directory: ./server
+      run: npm install
+
+    - name: Install client dependencies
+      working-directory: ./client
+      run: npm install
+      
+    - name: Install Playwright Browsers
+      working-directory: ./client
+      run: npx playwright install --with-deps chromium
+      
+    - name: Run System Tests
+      working-directory: ./client
+      run: npx playwright test
