@@ -1,16 +1,17 @@
 function validateNoteTitle(title) {
-  // TODO: implement
+  if (!title || typeof title !== 'string' || title.trim() === '') return false;
+  if (title.length > 100) return false;
   return true;
 }
 
 function validateNoteContent(content) {
-  // TODO: implement
+  if (!content || typeof content !== 'string' || content.trim() === '') return false;
+  if (content.length > 500) return false;
   return true;
 }
 
 function generateNoteId() {
-  // TODO: implement
-  return "stub-id";
+  return Date.now().toString(36) + Math.random().toString(36).substring(2, 9);
 }
 
 module.exports = {
