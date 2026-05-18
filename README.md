@@ -44,3 +44,26 @@ We are following a strict Red-Green-Refactor TDD cycle. The testing approach is 
 - **System Tests:** `cd client && npx playwright test`
 
 ## Test Results
+
+### Unit Tests (Phase 1)
+
+#### Commit 1
+![TestSuite1](server/imgs/testsuites1.png)
+![Validation1a](server/imgs/validation1a.png)
+![Validation1b](server/imgs/validation1b.png)
+![Validation1c](server/imgs/validation1c.png)
+![Validation1d](server/imgs/validation1d.png)
+![Validation1e](server/imgs/validation1e.png)
+![Validation1f](server/imgs/validation1f.png)
+
+#### Commit 2
+![TestSuite2](server/imgs/testsuites2.png)
+![Validation2a](server/imgs/validation2.png)
+
+
+#### Commit 3
+![TestSuite3](server/imgs/testsuites3.png)
+![Validation3a](server/imgs/validation3.png)
+
+#### Commit 4
+[DOCS UPDATE]
