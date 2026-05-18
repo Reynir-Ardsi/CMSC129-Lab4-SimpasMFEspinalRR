@@ -87,3 +87,29 @@ We are following a strict Red-Green-Refactor TDD cycle. The testing approach is 
 
 #### Commit 8
 [DOCS UPDATE]
+
+### System Tests (Phase 3)
+
+#### Commit 9
+![TestSuite9](server/imgs/testsuites9.png)
+![Validation9](server/imgs/validation9.png)
+
+
+#### Commit 10
+![TestSuite10](server/imgs/testsuites10.png)
+![Validation10](server/imgs/validation10.png)
+
+#### Commit 11
+![TestSuite11](server/imgs/testsuites11.png)
+![Validation11](server/imgs/validation11.png)
+
+#### Commit 12
+![Full Test Suite](server/imgs/full-test-suite.png)
+
+## Reflection
+
+This lab reinforced how Test-Driven Development provides a disciplined and structured approach to building software. By writing tests first, we were forced to think carefully about the expected behavior of each function and endpoint before writing any implementation code. The Red-Green-Refactor cycle kept us focused: write a failing test, implement the minimum code to pass it, then clean up without changing behavior.
+
+One of the biggest takeaways was understanding how different testing levels complement each other. Unit tests validated our pure logic functions in isolation, integration tests verified the full HTTP request-response cycle of our API, and system tests with Playwright confirmed that the entire application worked from the user's perspective in a real browser.
+
+The strict commit discipline also taught us the importance of small, incremental changes and maintaining a clean, traceable history that clearly demonstrates the TDD process.
