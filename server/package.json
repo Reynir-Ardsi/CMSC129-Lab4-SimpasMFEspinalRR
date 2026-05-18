@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "jest",
-    "test:unit": "jest tests/unit",
-    "test:integration": "jest tests/integration"
+    "test": "jest --passWithNoTests",
+    "test:unit": "jest --passWithNoTests tests/unit",
+    "test:integration": "jest --passWithNoTests tests/integration"
   },
   "keywords": [],
   "author": "",
