@@ -2,6 +2,15 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Notes App - System Tests', () => {
 
+  test.beforeEach(async ({ request }) => {
+    // Clear all notes before each test for isolation
+    const response = await request.get('http://localhost:3001/notes');
+    const notes = await response.json();
+    for (const note of notes) {
+      await request.delete(`http://localhost:3001/notes/${note.id}`);
+    }
+  });
+
   test('User can create a note', async ({ page }) => {
     await page.goto('/');
 
