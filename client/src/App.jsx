@@ -36,6 +36,12 @@ function App() {
     setContent(note.content);
   };
 
+  const handleCancelEdit = () => {
+    setEditingId(null);
+    setTitle('');
+    setContent('');
+  };
+
   const handleSaveNote = async () => {
     await fetch(`/notes/${editingId}`, {
       method: 'PUT',
@@ -54,8 +60,11 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Notes App</h1>
+    <div className="app-container">
+      <header className="app-header">
+        <h1>📒 Notes App</h1>
+        <p>Organize your thoughts, one note at a time</p>
+      </header>
 
       <NoteForm
         title={title}
@@ -65,17 +74,30 @@ function App() {
         onContentChange={setContent}
         onAdd={handleAddNote}
         onSave={handleSaveNote}
+        onCancel={handleCancelEdit}
       />
 
+      <div className="notes-list-header">
+        <h2>Your Notes</h2>
+        <span className="note-count">{notes.length} {notes.length === 1 ? 'note' : 'notes'}</span>
+      </div>
+
       <div>
-        {notes.map((note) => (
-          <NoteItem
-            key={note.id}
-            note={note}
-            onEdit={handleEditClick}
-            onDelete={handleDeleteNote}
-          />
-        ))}
+        {notes.length === 0 ? (
+          <div className="empty-state">
+            <div className="emoji">📝</div>
+            <p>No notes yet. Create your first note above!</p>
+          </div>
+        ) : (
+          notes.map((note) => (
+            <NoteItem
+              key={note.id}
+              note={note}
+              onEdit={handleEditClick}
+              onDelete={handleDeleteNote}
+            />
+          ))
+        )}
       </div>
     </div>
   );
